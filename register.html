@@ -51,9 +51,8 @@ if (name==null || name==""){
   alert("Name can't be blank");
   return false;
 }else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-  document.register_form.user_email.setCustomValidity("Dude '" + document.register_form.user_email.value + "' is not a valid email. Enter something nice!!");
+ alert("Please enter a valid email id");
 
-      /*  alert("Not a valid e-mail address");*/
         return false;
     }else if(password.length<6){
   alert("Password must be at least 6 characters long.");
@@ -458,19 +457,19 @@ if (name==null || name==""){
                          <form action="save_user.php" method="post" name="register_form" onsubmit="return validateform()">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="user_name"/>
+                                <input type="text" class="form-control" name="user_name"/>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="user_email"/>
+                                <input type="email" class="form-control" name="user_email"/>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="user_pass"/>
+                                <input type="password" class="form-control" name="user_pass"/>
                             </div>
                             <div class="form-group">
                                 <label for="password">Confirm Password</label>
-                                <input type="password" class="form-control" id="user_pass_confirm"/>
+                                <input type="password" class="form-control" name="user_pass_confirm"/>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Register</button>
@@ -489,14 +488,14 @@ if (name==null || name==""){
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form action="authenticate.php" method="post">
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
+                                <label for="email">Username</label>
+                                <input type="text" class="form-control" name="username">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" name="password">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
