@@ -36,34 +36,36 @@
 
     <link rel="shortcut icon" href="favicon.png">
 
-<script>  
-function validateform(){  
+<script>
+function validateform(){
 var name=document.register_form.user_name.value;
 var email=document.register_form.user_email.value;
-  
-var password=document.register_form.user_pass.value;  
+
+var password=document.register_form.user_pass.value;
 var password_confirm=document.register_form.user_pass_confirm.value;
-  
+
   var atpos = email.indexOf("@");
     var dotpos = email.lastIndexOf(".");
-    
-if (name==null || name==""){  
-  alert("Name can't be blank");  
-  return false;  
+
+if (name==null || name==""){
+  alert("Name can't be blank");
+  return false;
 }else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-        alert("Not a valid e-mail address");
+  document.register_form.user_email.setCustomValidity("Dude '" + document.register_form.user_email.value + "' is not a valid email. Enter something nice!!");
+
+      /*  alert("Not a valid e-mail address");*/
         return false;
-    }else if(password.length<6){  
-  alert("Password must be at least 6 characters long.");  
-  return false;  
+    }else if(password.length<6){
+  alert("Password must be at least 6 characters long.");
+  return false;
   }
   else if(password!=password_confirm)
   {
     alert("Password must be same");
     return false;
-  }  
-}  
-</script>  
+  }
+}
+</script>
 
 </head>
 
