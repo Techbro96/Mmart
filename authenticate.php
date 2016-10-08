@@ -17,12 +17,12 @@ $rows = mysql_num_rows($retval);
 	if ($rows > 0) 
 	{
 		$_SESSION['login_user']=$username;
-		header("location: index.html");
+		header("location: customer-account.php");
 	} 
 	else 
 	{
 		echo "Username or Password is invalid";
-		header('Refresh: 2; URL = register.html');
+		header('Refresh: 2; URL = register.php');
 	}
 mysql_close($conn); // Closing Connection
 ?>
