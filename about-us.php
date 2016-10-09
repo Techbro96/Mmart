@@ -91,10 +91,11 @@
 
 
                     <div class="box" id="contact">
-                        <h1>M - Mart Details like when started n all...kunal all contents on u...</h1>
+                        <h2>Who we are - India's most convenient online pharmacy</h2>
 
-                        <p class="lead">Are you curious about something? Do you have some kind of problem with our products?</p>
-                        <p>Please feel free to contact us, our customer service center is working for you 24/7.</p>
+                        <p class="lead">
+At M'MarT, we make a wide range of prescription medicines and other health products conveniently available all across India. Even second and third tier cities and rural villages can now have access to the latest medicines. Since we also offer generic alternatives to most medicines, online buyers can expect significant savings.</p>
+                        <p>we not only provide you with a wide range of medicines listed under various categories, we also offer a wide choice of OTC products including wellness products, vitamins, diet/fitness supplements, herbal products, pain relievers, diabetic care kits, baby/mother care products, beauty care products and surgical supplies.<p>
 
                         <hr>
 
@@ -102,17 +103,17 @@
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-map-marker"></i> Address</h3>
                                 <p>13/25 New Avenue
-                                    <br>New Heaven
-                                    <br>45Y 73J
-                                    <br>England
+                                    <br> Lamingtoon road
+                                    <br>400008
+                                    <br>India
                                     <br>
-                                    <strong>Great Britain</strong>
+                                  
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-phone"></i> Call center</h3>
-                                <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
+                                <p class="text-muted">This number is toll free if calling from India otherwise we advise you to use the electronic form of communication.</p>
                                 <p><strong>+33 555 444 333</strong>
                                 </p>
                             </div>
@@ -121,9 +122,9 @@
                                 <h3><i class="fa fa-envelope"></i> Electronic support</h3>
                                 <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
                                 <ul>
-                                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                    <li><strong><a href="mailto:">M'Mart@gmail.com</a></strong>
                                     </li>
-                                    <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
+
                                 </ul>
                             </div>
                             <!-- /.col-sm-4 -->
@@ -152,12 +153,12 @@
     <!-- /#all -->
 
 
-    
-
-   
 
 
-    
+
+
+
+
 </body>
 
 </html>

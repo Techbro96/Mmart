@@ -90,7 +90,8 @@ if (name==null || name==""){
                         <h1>New account</h1>
 
                         <p class="lead">Not our registered customer yet?</p>
-                        <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
+                        <p>Dear Valued Customer, Welcome back! Thank you for continuing to rely on Netmeds.com for your healthcare needs. We are committed to 100% customer satisfaction and we will do everything possible to make sure you are always satisfied with your purchase and our service.
+                        This is M'MarT’ commitment to you – our loyal customer.</p>
                         <p class="text-muted">If you have any questions, please feel free to <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.</p>
 
                         <hr>
@@ -124,8 +125,7 @@ if (name==null || name==""){
                         <h1>Login</h1>
 
                         <p class="lead">Already our customer?</p>
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-                            mi vitae est. Mauris placerat eleifend leo.</p>
+
 
                         <hr>
 
@@ -158,7 +158,7 @@ if (name==null || name==""){
 
 
 <?php include 'footer.html'?>
-   
+
 </body>
 
 </html>

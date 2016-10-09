@@ -99,11 +99,11 @@ word-wrap: break-word;
 
 
                     <div class="box" id="contact">
-                    <img class="about_img" src="img/SAP_image.jpg" align="right"><br/> 
-                        <h1>Soham Patel</h1>
+                    <img class="about_img" src="img/miku.jpg" align="right"><br/>
+                        <h1>Kunal Bishnoi</h1>
                         <p class="lead">
-        Soham Patel. A Future Computer Engineer likes to explore new things and try to learn new things everytime.
-        He is nice human being to. He even likes help everyone around him.
+      
+        Graphic Designer
     </p>
 
                         <hr>
@@ -111,19 +111,19 @@ word-wrap: break-word;
                         <div class="row">
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-map-marker"></i>Address</h3>
-                                <p>13/25 New Avenue
-                                    <br>New Heaven
-                                    <br>45Y 73J
-                                    <br>England
+                                <p>13/25 shahpati
+                                    <br>New link road
+                                    <br>45Y 831
+                                    <br>Mumbai
                                     <br>
-                                    <strong>Great Britain</strong>
+                                    <strong>India</strong>
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-phone"></i> Call center</h3>
-                                <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
-                                <p><strong>+33 555 444 333</strong>
+                                <p class="text-muted">This number is toll free if calling from Great India otherwise we advise you to use the electronic form of communication.</p>
+                                <p><strong>98671401293</strong>
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
@@ -131,10 +131,9 @@ word-wrap: break-word;
                                 <h3><i class="fa fa-envelope"></i> Electronic support</h3>
                                 <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
                                 <ul>
-                                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                    <li><strong><a href="mailto:">kunalbishnoi.912@gmail.com</a></strong>
                                     </li>
-                                    <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
-                                </ul>
+
                             </div>
                             <!-- /.col-sm-4 -->
                         </div>
@@ -162,12 +161,12 @@ word-wrap: break-word;
     <!-- /#all -->
 
 
-    
-
-   
 
 
-    
+
+
+
+
 </body>
 
 </html>
