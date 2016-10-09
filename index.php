@@ -34,10 +34,10 @@
 </head>
 
 <body>
-    <?php 
+    <?php
     	include 'header.html';
     ?>
-    
+
     <div id="all">
 
         <div id="content">
@@ -127,7 +127,7 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="de5tail.html">
                                                 <img src="img/product1.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
@@ -142,8 +142,8 @@
                                     <img src="img/product1.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <h3><a href="detail.html">Himalaya Beauty Care</a></h3>
+                                    <p class="price">30% off</p>
                                 </div>
                                 <!-- /.text -->
                             </div>
@@ -170,8 +170,8 @@
                                     <img src="img/product2.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                    <p class="price"><del>$280</del> $143.00</p>
+                                    <h3><a href="detail.html">Cipla Resspiratory Care</a></h3>
+                                    <p class="price"><del></del>20% off</p>
                                 </div>
                                 <!-- /.text -->
 
@@ -202,12 +202,12 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <img src="img/product5_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <img src="img/product5_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
@@ -216,8 +216,8 @@
                                     <img src="img/product3.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Black Blouse Versace</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <h3><a href="detail.html">Novartis Medi Care</a></h3>
+                                    <p class="price">20% off</p>
                                 </div>
                                 <!-- /.text -->
                             </div>
@@ -241,11 +241,11 @@
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <img src="img/product4.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Black Blouse Versace</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <h3><a href="detail.html">Novartis</a></h3>
+                                    <p class="price">Buy 1 Get 1</p>
                                 </div>
                                 <!-- /.text -->
                             </div>
@@ -258,12 +258,12 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="img/product4.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="img/product4_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
@@ -272,8 +272,8 @@
                                     <img src="img/product2.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">White Blouse Versace</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <h3><a href="detail.html">silly Medi Care</a></h3>
+                                    <p class="price">10% off</p>
                                 </div>
                                 <!-- /.text -->
 
@@ -405,7 +405,7 @@
             <!-- /#hot -->
 
             <!-- *** HOT END *** -->
-			
+
             <!-- *** BLOG HOMEPAGE ***
  _________________________________________________________ -->
 
