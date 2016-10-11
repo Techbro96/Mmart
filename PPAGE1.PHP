@@ -62,11 +62,12 @@
     				</div>
 
     				<div class="col-md-6">
-    					<div class="product-title">BUDECORT Repsules</div>
-    					<div class="product-desc">Budecort - 0.5 mg Respules</div>
+    					<div class="product-title">Crocin Advance</div>
+    					<div class="product-desc">500MG TABLET 15'S Paracetamol
+</div>
     					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
     					<hr>
-    					<div class="product-price">&#8377 123.00</div>
+    					<div class="product-price">&#8377 11.76</div>
     					<div class="product-stock">In Stock</div>
     					<hr>
     					<div class="btn-group cart">
@@ -95,15 +96,8 @@
     						<div class="tab-pane fade in active" id="service-one">
 
     							<section class="container product-info">
-                 <p>  Budesonide is a non-halogenated glucocorticoid with an improved ratio of topical anti-inflammatory activity to systemic glucocorticoid effect. This is due to a high glucocorticoid receptor affinity combined with a high first-pass metabolism and a short half-life.
-</p>
-<p>Budesonide is an anti-inflammatory corticosteroid that exhibits potent glucocorticoid activity and weak mineralocorticoid activity. In standard in vitro and animal models, budesonide has approximately a 200-fold higher affinity for the glucocorticoid receptor and a 1,000-fold higher topical anti-inflammatory potency than cortisol (rat croton oil ear oedema assay). As a measure of systemic activity, budesonide is 40 times more potent than cortisol when administered subcutaneously and 25 times more potent when administered orally in the rat thymus involution assay.</p>
-<H3>Budecort Respules Capsule Uses: </H3>
-
-<LI>Parkinson's Disease
-<LI>Hormonal Problems
-<LI>Acromegaly
-<LI>Type 2 diabetes mellitus
+                 
+<p>Crocin Advance is used to lower fever and relieve general pain, such as headache, body ache, toothache, etc. "Pharmacokinetic studies show that the amount of paracetamol absorbed by the body is the same for both Crocin Advance and regular Crocin</p>
     							</section>
 
     						</div>
