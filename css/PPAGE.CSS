@@ -123,5 +123,5 @@
 }
 
 .service-image-left > center > img,.service-image-right > center > img{
-  max-height: 155px;
+      max-height: 320px;
 }
