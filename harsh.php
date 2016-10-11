@@ -99,11 +99,10 @@ word-wrap: break-word;
 
 
                     <div class="box" id="contact">
-                    <img class="about_img" src="img/SAP_image.jpg" align="right"><br/> 
-                        <h1>Soham Patel</h1>
+                    <img class="about_img" src="img\neo.jpg" align="right"><br/>
+                        <h1>Harsh Jhaveri</h1>
                         <p class="lead">
-        Soham Patel. A Future Computer Engineer likes to explore new things and try to learn new things everytime.
-        He is nice human being to. He even likes help everyone around him.
+      A Person who likes to manage a business and likes to work with New Technologies
     </p>
 
                         <hr>
@@ -131,7 +130,7 @@ word-wrap: break-word;
                                 <h3><i class="fa fa-envelope"></i> Electronic support</h3>
                                 <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
                                 <ul>
-                                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                    <li><strong><a href="mailto:">Harsh.jhaveri108@gmail.com</a></strong>
                                     </li>
                                     <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
                                 </ul>
@@ -162,12 +161,12 @@ word-wrap: break-word;
     <!-- /#all -->
 
 
-    
-
-   
 
 
-    
+
+
+
+
 </body>
 
 </html>
