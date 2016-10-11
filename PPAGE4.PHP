@@ -72,7 +72,7 @@ Paracetamol</div>
     					<div class="product-stock">In Stock</div>
     					<hr>
     					<div class="btn-group cart">
-    						<button type="button" class="btn btn-success" onclick="document.location.href='fileUploadDemo.html';">
+    						<button type="button" class="btn btn-success">
     							Buy Now
     						</button>
     					</div>
