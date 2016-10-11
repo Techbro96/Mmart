@@ -131,9 +131,8 @@ word-wrap: break-word;
                                 <h3><i class="fa fa-envelope"></i> Electronic support</h3>
                                 <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
                                 <ul>
-                                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                    <li><strong><a href="mailto:">mr.soham@outlook.com</a></strong>
                                     </li>
-                                    <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
                                 </ul>
                             </div>
                             <!-- /.col-sm-4 -->

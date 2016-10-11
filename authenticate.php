@@ -16,8 +16,8 @@ $retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_er
 $rows = mysql_num_rows($retval);
 	if ($rows > 0) 
 	{
-		$_SESSION['login_user']=$username;
-		header("location: customer-account.php");
+		echo "Welcome ".$username." to M-Mart";
+		header('Refresh: 2,URL=customer-account.php');
 	} 
 	else 
 	{

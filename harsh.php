@@ -99,7 +99,11 @@ word-wrap: break-word;
 
 
                     <div class="box" id="contact">
+<<<<<<< HEAD
+                    <img class="about_img" src="img\neo.jpeg" align="right"><br/>
+=======
                     <img class="about_img" src="img\neo.jpg" align="right"><br/>
+>>>>>>> origin/master
                         <h1>Harsh Jhaveri</h1>
                         <p class="lead">
       A Person who likes to manage a business and likes to work with New Technologies
@@ -132,7 +136,6 @@ word-wrap: break-word;
                                 <ul>
                                     <li><strong><a href="mailto:">Harsh.jhaveri108@gmail.com</a></strong>
                                     </li>
-                                    <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
                                 </ul>
                             </div>
                             <!-- /.col-sm-4 -->
