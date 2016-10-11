@@ -54,7 +54,7 @@
     					<div class="product col-md-12 service-image-left">
 
     						<center>
-    							<img id="item-display" src="img\Crocin Advance.png" alt=""></img>
+    							<img id="item-display" src="img\Duolin Repsules.jpeg" alt=""></img>
     						</center>
     					</div>
 
@@ -62,8 +62,8 @@
     				</div>
 
     				<div class="col-md-6">
-    					<div class="product-title">BUDECORT Repsules</div>
-    					<div class="product-desc">Budecort - 0.5 mg Respules</div>
+    					<div class="product-title">Duolin Repsules</div>
+    					<div class="product-desc">Levosalbutamol sulphate…..1.25 mg</div>
     					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
     					<hr>
     					<div class="product-price">&#8377 123.00</div>
@@ -95,15 +95,12 @@
     						<div class="tab-pane fade in active" id="service-one">
 
     							<section class="container product-info">
-                 <p>  Budesonide is a non-halogenated glucocorticoid with an improved ratio of topical anti-inflammatory activity to systemic glucocorticoid effect. This is due to a high glucocorticoid receptor affinity combined with a high first-pass metabolism and a short half-life.
-</p>
-<p>Budesonide is an anti-inflammatory corticosteroid that exhibits potent glucocorticoid activity and weak mineralocorticoid activity. In standard in vitro and animal models, budesonide has approximately a 200-fold higher affinity for the glucocorticoid receptor and a 1,000-fold higher topical anti-inflammatory potency than cortisol (rat croton oil ear oedema assay). As a measure of systemic activity, budesonide is 40 times more potent than cortisol when administered subcutaneously and 25 times more potent when administered orally in the rat thymus involution assay.</p>
-<H3>Budecort Respules Capsule Uses: </H3>
+                 <p>DUOLIN respules is a combination of the beta2-adrenergic bronchodilator, levosalbutamol sulphate, and the anticholinergic bronchodilator, ipratropium bromide.</p>
+<p>Levosalbutamol sulphate is a relatively selective beta2-adrenergic agonist, whose activation leads to an increase in intracellular adenyl cyclase, the enzyme which catalyses the conversion of adenosine triphosphate (ATP) to cyclic-3`, 5`-adenosine monophosphate (cAMP).</p>
+<H3>Warning and Precautions: </H3>
 
-<LI>Parkinson's Disease
-<LI>Hormonal Problems
-<LI>Acromegaly
-<LI>Type 2 diabetes mellitus
+<LI>Paradoxical Bronchospasm
+<LI>Do Not Exceed Recommended Dose
     							</section>
 
     						</div>

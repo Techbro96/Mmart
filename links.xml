@@ -2,38 +2,38 @@
 <pages>
   <link>
     <title>crocin advance</title>
-    <url>http://localhost/SOOAD/Mmart/PPAGE1.PHP</url>
+    <url>PPAGE1.PHP</url>
   </link>
   <link>
     <title>cetirizine</title>
-    <url>http://localhost/SOOAD/Mmart/PPAGE2.PHP</url>
+    <url>PPAGE2.PHP</url>
   </link>
   <link>
     <title>benadryl cough syrup</title>
-    <url>http://localhost/SOOAD/Mmart/PPAGE3.PHP</url>
+    <url>PPAGE3.PHP</url>
   </link>
   <link>
     <title>metacin syrup</title>
-    <url>http://localhost/SOOAD/Mmart/PPAGE4.PHP</url>
+    <url>PPAGE4.PHP</url>
   </link>
   <link>
     <title>rotahaler</title>
-    <url>http://www.w3schools.com/jsref/jsref_obj_date.asp</url>
+    <url>PPage5.php</url>
   </link>
   <link>
     <title>budecort respules </title>
-    <url>http://www.w3schools.com/jsref/jsref_obj_array.asp</url>
+    <url>PPage6.php</url>
   </link>
   <link>
   <title>duolin respules </title>
-    <url>http://www.w3schools.com/jsref/jsref_obj_array.asp</url>
+    <url>PPage7.php</url>
   </link>
   <link>
   <title>pampers</title>
-    <url>http://www.w3schools.com/jsref/jsref_obj_array.asp</url>
+    <url>PPage8.php</url>
   </link>
   <link>
   <title>benadon </title>
-    <url>http://www.w3schools.com/jsref/jsref_obj_array.asp</url>
+    <url>PPage9.php</url>
   </link>
 </pages>

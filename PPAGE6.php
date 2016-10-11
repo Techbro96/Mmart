@@ -54,7 +54,7 @@
     					<div class="product col-md-12 service-image-left">
 
     						<center>
-    							<img id="item-display" src="img\Crocin Advance.png" alt=""></img>
+    							<img id="item-display" src="img\Budecort Repsules.jpeg" alt=""></img>
     						</center>
     					</div>
 
