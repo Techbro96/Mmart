@@ -98,7 +98,7 @@ Rotahaler Capsule l</div>
     							<section class="container product-info">
                 Rotahaler Capsule is indicated for the treatment of bronchitis, asthma, lung infections, chronic obstructive pulmonary disease and other conditions. Rotahaler Capsule contains the following active ingredients: All Other Anti Asthma And Copd Products. It is available in capsule form. Cipla manufactures Rotahaler Capsule
 
-                   <H3>Rotahaler Capsule is used in the treatment, control, prevention, & improvement of the following diseases, conditions and symptoms:<H3>
+                   <H3>Rotahaler Capsule is used in the treatment, control, prevention, & improvement of the following diseases, conditions and symptoms:</H3>
 
                   <LI>   Bronchitis
                   <LI>   Asthma
