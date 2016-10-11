@@ -14,6 +14,6 @@
    mysql_select_db($dbname);
    $retval = mysql_query($insert_data,$conn) or die('Unable to insert data: ' . mysql_error());
    echo "Entered data successfully\n";
-   header("location: index.php"); 
+   header('Refresh: 2;URL=index.php'); 
    mysql_close($conn);
 ?>
