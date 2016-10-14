@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2016 at 08:08 AM
+-- Generation Time: Oct 14, 2016 at 09:03 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -23,34 +23,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_details`
+-- Table structure for table `order_details`
 --
 
-CREATE TABLE `user_details` (
+CREATE TABLE `order_details` (
+  `sr_no` int(5) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `emailid` varchar(20) NOT NULL
+  `itemname` varchar(20) NOT NULL,
+  `pres_filename` varchar(100) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_details`
+-- Dumping data for table `order_details`
 --
 
-INSERT INTO `user_details` (`username`, `password`, `emailid`) VALUES
-('Marwadi', 'kunalb', 'kunal@kunal.com'),
-('Neo', 'harshjhaveri', 'harsh@neo.com'),
-('SAP', 'sohampatel', 'sap@sap.com');
+INSERT INTO `order_details` (`sr_no`, `username`, `itemname`, `pres_filename`, `status`) VALUES
+(1, 'SAP', 'Crocin advance', '3D-HD-Wallpaper-For-Android-620x388.jpg', 0),
+(10, 'neo', 'Benadon', '3D-HD-Wallpaper-For-Android-620x388.jpg', 0);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user_details`
+-- Indexes for table `order_details`
 --
-ALTER TABLE `user_details`
-  ADD PRIMARY KEY (`username`);
+ALTER TABLE `order_details`
+  ADD PRIMARY KEY (`sr_no`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `order_details`
+--
+ALTER TABLE `order_details`
+  MODIFY `sr_no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
