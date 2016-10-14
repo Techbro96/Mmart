@@ -59,7 +59,7 @@ _________________________________________________________ -->
                        }
                       else{
                         $uname=$_SESSION['user'];
-                        $UserName="<a href='customer-account.php'>$uname</a>";
+                        $UserName="<a href='customer-order.php'>$uname</a>";
                           echo "<li>$UserName</li>";
                        }
 
