@@ -1,15 +1,16 @@
+<?php   session_start();  ?>
 <?php
 
-   $insert_name=$_POST['user_name'];
-   $insert_email=$_POST['user_email'];
-   $insert_pass=$_POST['user_pass'];
+   $insert_name=$_SESSION['user'];
+   $insert_itemname=$_SESSION['item_name'];
+   $insert_pres=$_SESSION['pres_filename'];
    $dbname = 'm-mart';
    $user = 'root';
    $pass = '';
    $conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to connect: ".mysql_error());
    
-   $insert_data = "INSERT INTO order_details (username,password,emailid) 
-                     VALUES ('$insert_name','$insert_pass','$insert_email')";
+   $insert_data = "INSERT INTO order_details (username,itemname,pres_filename,status) 
+                     VALUES ('$insert_name','$insert_itemname','$insert_pres',0)";
       
    mysql_select_db($dbname);
    $retval = mysql_query($insert_data,$conn) or die('Unable to insert data: ' . mysql_error());

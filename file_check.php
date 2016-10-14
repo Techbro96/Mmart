@@ -1,4 +1,6 @@
+<?php   session_start();  ?>
 <?php
+
    if(isset($_FILES['image'])){
       $errors= array();
       $file_name = $_FILES['image']['name'];
@@ -18,9 +20,10 @@
       }
       
       if(empty($errors)==true){
+         $_SESSION['pres_filename']=$file_name;
          move_uploaded_file($file_tmp,"images/".$file_name);
          echo "Prescription Uploaded...";
-         header('Refresh: 2; URL=payment.html');
+         header('Refresh: 2; URL=payment.php');
       }else{
          echo "Prescription Uploading failed...";
          print_r($errors);

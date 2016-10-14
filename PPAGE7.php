@@ -45,7 +45,7 @@
 <body>
     <?php 
         include 'header.php';
-        $user = $_SESSION['user'];
+        $_SESSION['item_name'] = 'Duolin Repsules';
     ?>
 
 
@@ -73,7 +73,17 @@
     					<div class="product-stock">In Stock</div>
     					<hr>
     					<div class="btn-group cart">
-    						<button type="button" class="btn btn-success" onclick="document.location.href='fileUploadDemo.html';">
+    						<button type="button" class="btn btn-success" onclick=<?php  
+
+                            if(!isset($_SESSION['user'])) // If session is not set that redirect to Login Page
+                      {
+                        echo "document.location.href='register.php';";
+                      }
+                      if(isset($_SESSION['user']))
+                      {
+                        echo "document.location.href='fileUploadDemo.html';";
+                      }
+                       ?>>
     							Buy Now
     						</button>
     					</div>
