@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php   session_start();  ?>
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/owl.carousel.css" rel="stylesheet">
 <link href="css/owl.theme.css" rel="stylesheet">
@@ -46,10 +47,26 @@ _________________________________________________________ -->
         </div>
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
-                <li><a href="register.php">Login</a>
-                </li>
-                <li><a href="register.php">Register</a>
-                </li>
+              <?php
+
+
+                      $login="<a href='register.php'>Login</a> ";
+                      $register="<a href='register.php'>Register</a>";
+                      if(!isset($_SESSION['user'])) // If session is not set that redirect to Login Page
+                      {
+                           echo "<li>$login</li>";
+                           echo "<li>$register</li>";
+                       }
+                      else{
+                        $uname=$_SESSION['user'];
+                        $UserName="<a href='customer-account.php'>$uname</a>";
+                          echo "<li>$UserName</li>";
+                       }
+
+
+              ?>
+
+
                 <li><a href="about-us.php">About us</a>
                 </li>
             </ul>

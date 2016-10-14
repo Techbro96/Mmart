@@ -42,8 +42,9 @@
 
 <body>
     <?php
-		include 'header.html';
+		include 'header.php';
 	?>
+
     <div id="all">
 
         <div id="content">
@@ -55,6 +56,7 @@
                         <li><a href="#">Home</a>
                         </li>
                         <li>My account</li>
+                        <li>   <?php echo $_SESSION['user'];?> </li><!-- user name -->
                     </ul>
 
                 </div>
@@ -78,7 +80,7 @@
                                     <a href="customer-account.php"><i class="fa fa-user"></i> My account</a>
                                 </li>
                                 <li>
-                                    <a href="index.php"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
                                 </li>
                             </ul>
                         </div>
