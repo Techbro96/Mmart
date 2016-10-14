@@ -12,7 +12,7 @@
     <meta name="keywords" content="">
 
     <title>
-        Product Info
+        Crocin Advance
     </title>
 
     <meta name="keywords" content="">
@@ -43,8 +43,11 @@
 </head>
 
 <body>
-    <?php include 'header.html';?>
-
+    <?php 
+        include 'header.php';
+        $user = $_SESSION['user'];
+    ?>
+    
 
     <div class="container-fluid">
         <div class="content-wrapper">

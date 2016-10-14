@@ -43,7 +43,11 @@
 </head>
 
 <body>
-    <?php include 'header.html';?>
+    <?php 
+        include 'header.php';
+        $user = $_SESSION['user'];
+    ?>
+
 
 
     <div class="container-fluid">
