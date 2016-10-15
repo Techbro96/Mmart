@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 </head>
-<?php 
+<?php
 session_start();
 ?>
 <body>
@@ -16,9 +16,9 @@ session_start();
     <div class="w3-container w3-center">
       <h3>Friend Request</h3>
 
-      <?php 
-      $image = $_SESSION['prescription']; 
-      echo '<img src="'.$image.'" alt="Avatar" style="width:80%">';
+      <?php
+      $image = $_SESSION['prescription'];
+      echo '<img src="images/'.$image.'" alt="Avatar" style="width:80%">';
       ?>
 
       <div class="w3-section">
