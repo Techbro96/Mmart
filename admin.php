@@ -3,17 +3,13 @@
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
-
-<body>
+<body align='center'>
 <form action="load_pres.php" method="POST">
 <input type="text" name="sr_no" placeholder="enter sr_no">
 <input type="submit" name="display prescription">
 </form>
-
 </body>
 <?php
-
-session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 
 
@@ -26,7 +22,7 @@ $query = "select * from order_details where status=0";
 mysql_select_db($dbname);
 $retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
 echo "<h3>Order Details</h1>";
-echo "<table> <th>Sr No &nbsp;</th><th>Username &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
+echo "<table align='center'> <th>Sr No &nbsp;</th><th>Username &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
 while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
      echo "<tr><td> {$row['sr_no']}  ".
         "<td> {$row['username']}  &nbsp;&nbsp;".
