@@ -14,7 +14,7 @@ session_start();
   <div class="w3-card-8 w3-dark-grey" style="width:50%">
 
     <div class="w3-container w3-center">
-      <h3>Friend Request</h3>
+      <h3>Prescription/h3>
 
       <?php
       $image = $_SESSION['prescription'];

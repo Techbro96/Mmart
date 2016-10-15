@@ -94,8 +94,66 @@
                 <div class="col-md-9">
                     <div class="box">
 
-                        <?php echo "Welcome ".$_SESSION['user'];?>
-                    </div>
+                        <?php echo "Welcome ".$_SESSION['user'];
+
+                        $error=''; // Variable To Store Error Message
+
+
+$dbname = 'm-mart';
+$user = 'root';
+$pass = '';
+$conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to Connect: ".mysql_error());
+$logged_user = $_SESSION['user'];
+$query = "select * from order_details where status=0 AND username='$logged_user'";
+mysql_select_db($dbname);
+$retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
+echo "<h3>Orders Pending</h1>";
+echo "<table> <th>Sr No &nbsp;</th><th>Username &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
+while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+     echo "<tr><td> {$row['sr_no']}  ".
+        "<td> {$row['username']}  &nbsp;&nbsp;".
+        "<td> {$row['itemname']}  &nbsp;&nbsp;".
+        "<td> {$row['pres_filename']} &nbsp;&nbsp; ".
+        "<td> {$row['status']} ";
+
+  }
+echo "</table>";
+
+
+$conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to Connect: ".mysql_error());
+
+$query = "select * from order_details where status=1 AND username='$logged_user'";
+mysql_select_db($dbname);
+$retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
+echo "<h3>Orders Accepted</h1>";
+echo "<table> <th>Sr No &nbsp;</th><th>Username &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
+while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+     echo "<tr><td> {$row['sr_no']}  ".
+        "<td> {$row['username']}  &nbsp;&nbsp;".
+        "<td> {$row['itemname']}  &nbsp;&nbsp;".
+        "<td> {$row['pres_filename']} &nbsp;&nbsp; ".
+        "<td> {$row['status']} ";
+
+  }
+echo "</table>";
+
+$conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to Connect: ".mysql_error());
+
+$query = "select * from order_details where status=2 AND username='$logged_user'";
+mysql_select_db($dbname);
+$retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
+echo "<h3>Orders Rejected</h1>";
+echo "<table> <th>Sr No &nbsp;</th><th>Username &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
+while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+     echo "<tr><td> {$row['sr_no']}  ".
+        "<td> {$row['username']}  &nbsp;&nbsp;".
+        "<td> {$row['itemname']}  &nbsp;&nbsp;".
+        "<td> {$row['pres_filename']} &nbsp;&nbsp; ".
+        "<td> {$row['status']} ";
+
+  }
+echo "</table>";
+                 ?>   </div>
                 </div>
 
             </div>
