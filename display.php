@@ -22,8 +22,8 @@ session_start();
       ?>
 
       <div class="w3-section">
-        <button class="w3-btn w3-green">Accept</button>
-        <button class="w3-btn w3-red">Decline</button>
+        <button onclick="window.location.href='update.php'" class="w3-btn w3-green">Accept</button>
+        <button onclick="window.location.href='update2.php'" class="w3-btn w3-red">Decline</button>
       </div>
     </div>
 

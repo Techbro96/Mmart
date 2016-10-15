@@ -14,6 +14,7 @@ mysql_select_db($dbname);
 $retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
 		$image=$row['pres_filename'];
+		 $_SESSION['srno']=$row['sr_no'];
      $_SESSION['prescription'] =$image;
      header('Refresh: 2,URL=display.php');
   }
