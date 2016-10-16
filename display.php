@@ -1,6 +1,37 @@
 <html>
 <head>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.card-container{
+  padding:0.01em 16px;
+}
+
+.card-card{
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;
+  color:#fff!important;background-color:#616161!important
+}
+
+.card-center{
+  text-align: center;
+}
+
+.card-section{
+  margin-top:16px!important;margin-bottom:16px!important;
+}
+.card-accept-green{
+border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap;
+color:#fff!important;background-color:#4CAF50!important;
+}
+.card-accept-green:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.card-reject-red{
+border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap;
+color:#fff!important;background-color:#f44336!important;
+}
+.card-reject-red:hover{
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+</style>
 <script>
 function showResult(str) {
   if (str.length==0) {
@@ -31,7 +62,7 @@ session_start();
 ?>
 
 <body>
-<div class="w3-container">
+<div class="card-container">
 
   <h2>Search the Doctor Name</h2>
 
@@ -40,19 +71,19 @@ session_start();
   <div id="live"></div>
   </form>
 
-  <div class="w3-card-8 w3-dark-grey" style="width:50%">
+  <div class="card-card" style="width:50%">
 
-    <div class="w3-container w3-center">
-      <h3>Prescription/h3>
+    <div class="card-container card-center">
+      <h3>Prescription</h3>
 
       <?php
       $image = $_SESSION['prescription'];
       echo '<img src="images/'.$image.'" alt="Avatar" style="width:80%">';
       ?>
 
-      <div class="w3-section">
-        <button onclick="window.location.href='update.php'" class="w3-btn w3-green">Accept</button>
-        <button onclick="window.location.href='update2.php'" class="w3-btn w3-red">Decline</button>
+      <div class="card-section">
+        <button onclick="window.location.href='update.php'" class="card-accept-green">Accept</button>
+        <button onclick="window.location.href='update2.php'" class="card-reject-red">Decline</button>
       </div>
     </div>
 
