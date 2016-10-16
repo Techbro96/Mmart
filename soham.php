@@ -75,7 +75,7 @@ word-wrap: break-word;
 
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
+                                <li class="active">
                                     <a href="soham.php">Soham Patel</a>
                                 </li>
                                 <li>
@@ -99,7 +99,7 @@ word-wrap: break-word;
 
 
                     <div class="box" id="contact">
-                    <img class="about_img" src="img/SAP_image.jpg" align="right"><br/> 
+                    <img class="about_img" src="img/SAP_image.jpg" align="right"><br/>
                         <h1>Soham Patel</h1>
                         <p class="lead">
         Soham Patel. A Future Computer Engineer likes to explore new things and try to learn new things everytime.
@@ -161,12 +161,12 @@ word-wrap: break-word;
     <!-- /#all -->
 
 
-    
-
-   
 
 
-    
+
+
+
+
 </body>
 
 </html>

@@ -81,7 +81,7 @@ word-wrap: break-word;
                                 <li>
                                     <a href="harsh.php">Harsh Jhaveri</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="kunal.php">Kunal Bishnoi</a>
                                 </li>
 
@@ -102,7 +102,7 @@ word-wrap: break-word;
                     <img class="about_img" src="img/miku.jpg" align="right"><br/>
                         <h1>Kunal Bishnoi</h1>
                         <p class="lead">
-      
+
         Graphic Designer
     </p>
 

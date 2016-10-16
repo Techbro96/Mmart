@@ -78,7 +78,7 @@ word-wrap: break-word;
                                 <li>
                                     <a href="soham.php">Soham Patel</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="harsh.php">Harsh Jhaveri</a>
                                 </li>
                                 <li>
