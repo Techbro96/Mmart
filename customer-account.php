@@ -73,10 +73,10 @@
                         <div class="panel-body">
 
                             <ul class="nav nav-pills nav-stacked">
-                                <li class="active">
+                                <li >
                                     <a href="customer-order.php"><i class="fa fa-list"></i> My orders</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="customer-account.php"><i class="fa fa-user"></i> My account</a>
                                 </li>
                                 <li>
