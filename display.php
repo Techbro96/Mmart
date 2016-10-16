@@ -71,7 +71,7 @@ session_start();
   <div id="live"></div>
   </form>
 
-  <div class="card-card" style="width:50%">
+  <div class="card-card" style="width:100%">
 
     <div class="card-container card-center">
       <h3>Prescription</h3>
