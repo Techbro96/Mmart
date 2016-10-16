@@ -153,38 +153,7 @@ while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
 
   }
 echo "</table>";
-$conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to Connect: ".mysql_error());
-
-$query = "select * from order_details where  username='$logged_user'";
-mysql_select_db($dbname);
-$retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_error());
-echo "<h3>All Orders </h1>";
-echo "<table> <th>Order No &nbsp;</th><th>Itemname &nbsp;</th><th>Prescription Filename &nbsp;</th><th>Status &nbsp;</th>";
-while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
-     echo "<tr><td> {$row['sr_no']}  ".
-    //    "<td> {$row['username']}  &nbsp;&nbsp;".
-        "<td> {$row['itemname']}  &nbsp;&nbsp;".
-        "<td> {$row['pres_filename']} &nbsp;&nbsp; ";
-        if($row['status']==0)
-        {
-          echo "<td> <p class='bg-warning'>Order Pending..</p> ";
-        }
-        if($row['status']==1)
-        {
-          echo "<td>  <p class='bg-success'>Order Accepted</p> ";
-        }
-        if($row['status']==2)
-        {
-          echo "<td>  <p class='bg-danger'>Order Rejected</p> ";
-        }
-
-  }
-echo "</table>";
-                 ?>
- <p class="bg-warning">This text represents a warning.</p>
- <p class="bg-success">This text indicates success.</p>
- <p class="bg-danger">This text represents danger.</p>
-               </div>
+                 ?>   </div>
                 </div>
 
             </div>
