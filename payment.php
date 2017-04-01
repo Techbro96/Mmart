@@ -8,7 +8,7 @@
    $address=$_POST['address'];
    $zip=$_POST['zip'];
    $city=$_POST['city'];
-
+$faddress=$address .' , ' . $city .'-'. $zip;
 
              echo $email;
 
@@ -17,13 +17,14 @@
              echo $city;
 
              echo $zip;
+             echo $faddress;
    $dbname = 'm-mart';
    $user = 'root';
    $pass = '';
    $conn = mysql_connect("localhost",$user,$pass,$dbname) or die("Unable to connect: ".mysql_error());
 
-   $insert_data = "INSERT INTO order_details (username,itemname,pres_filename,status)
-                     VALUES ('$insert_name','$insert_itemname','$insert_pres',0)";
+   $insert_data = "INSERT INTO order_details (username,itemname,pres_filename,status,address)
+                     VALUES ('$insert_name','$insert_itemname','$insert_pres',0,'$faddress')";
 
    mysql_select_db($dbname);
    $retval = mysql_query($insert_data,$conn) or die('Unable to insert data: ' . mysql_error());
