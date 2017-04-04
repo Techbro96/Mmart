@@ -14,5 +14,5 @@ $retval = mysql_query($query, $conn) or die("Unable to Retrieve data: ".mysql_er
 
 
 echo  $_SESSION['srno'] ;
-   header('Refresh: 2,URL=admin.php');
+   header('Refresh: 2,URL=print.php');
 ?>
