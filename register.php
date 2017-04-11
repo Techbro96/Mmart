@@ -69,7 +69,9 @@ if (name==null || name==""){
 </head>
 
 <body>
-<?php include 'header.php';?>
+  <?php
+    include 'header.php';
+  ?>
     <div id="all">
 
         <div id="content">

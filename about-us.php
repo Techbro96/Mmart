@@ -35,9 +35,6 @@
     <script src="js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
-
-
-
 </head>
 
 <body>
@@ -107,7 +104,7 @@ At M'MarT, we make a wide range of prescription medicines and other health produ
                                     <br>400008
                                     <br>India
                                     <br>
-                                  
+
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->

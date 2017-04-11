@@ -42,7 +42,7 @@
     </head>
 
     <body>
-
+		
     	<div id="page-wrap">
 
     		<text id="header"><center>INVOICE</center></text>
@@ -134,7 +134,10 @@ function myFunction() {
 
     	</div>
 
-
+	
+    <form method="get" action="admin.php">
+		<button type="submit">Done</button>
+	</form>
     </body>
 
     </html>

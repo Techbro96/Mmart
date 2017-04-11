@@ -43,11 +43,11 @@
 </head>
 
 <body>
-    <?php 
+    <?php
         include 'header.php';
         $_SESSION['item_name'] = 'Crocin advance';
     ?>
-    
+
 
     <div class="container-fluid">
         <div class="content-wrapper">
@@ -74,7 +74,7 @@
     					<div class="product-stock">In Stock</div>
     					<hr>
     					<div class="btn-group cart">
-    						<button type="button" class="btn btn-success" onclick=<?php  
+    						<button type="button" class="btn btn-success" target="_self" onclick=<?php  
 
                             if(!isset($_SESSION['user'])) // If session is not set that redirect to Login Page
                       {
@@ -109,7 +109,7 @@
     						<div class="tab-pane fade in active" id="service-one">
 
     							<section class="container product-info">
-                 
+
 <p>Crocin Advance is used to lower fever and relieve general pain, such as headache, body ache, toothache, etc. "Pharmacokinetic studies show that the amount of paracetamol absorbed by the body is the same for both Crocin Advance and regular Crocin</p>
     							</section>
 
