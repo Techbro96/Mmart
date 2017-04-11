@@ -18,138 +18,123 @@
         		$uname=$row['username'];
             $iname=$row['itemname'];
             $address=$row['address'];
+
           }
 
-          echo $srno;
+  /*        echo $srno;
           echo "<BR>";
           echo $uname;
           echo "<BR>";
           echo $iname;
-          echo $address;
+          echo $address;*/
           ?>
           <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <head>
+    	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 
-	<title>Editable Invoice</title>
+    	<title>Editable Invoice</title>
 
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
-	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
-	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
+    	<link rel='stylesheet' type='text/css' href='css/style.css' />
+    	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-	<div id="page-wrap">
+    	<div id="page-wrap">
 
-		<textarea id="header">INVOICE</textarea>
+    		<text id="header"><center>INVOICE</center></text>
 
-		<div id="identity">
+    		<div id="identity">
+    							<img src="C:\Users\Lenovo\Desktop\EditableInvoice\images\logo.png" alt="logo" style="width:200px;height:160px;">
+                <text id="address">M'mart<br>
+    							123 Vidyalankar Street<br>
+    							Wadala, karve link<br>
+    							Phone: (022) 2341-5555</text>
+                
+    	</div>
 
-            <textarea id="address">M'mart
-123 Vidyalankar Street
-Wadala, karve link
+    		<div style="clear:both"></div>
 
-Phone: (022) 2341-5555</textarea>
+    		<div id="customer">
 
-            <div id="logo">
+                <text id="customer-title">M'mart<br>
+    							Online Medicine Portal</text>
 
-              <div id="logoctr">
-                <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a>
-                <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
-                |
-                <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
-                <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
-              </div>
+                <table id="meta">
+                    <tr>
+                        <td class="meta-head">Invoice #</td>
+                        <td><text>000123</text></td>
+                    </tr>
+                    <tr>
 
-              <div id="logohelp">
-                <input id="imageloc" type="text" size="50" value="" /><br />
-                (max width: 540px, max height: 100px)
-              </div>
-              <img id="image" src="images/logo.png" alt="logo" />
-            </div>
-
-		</div>
-
-		<div style="clear:both"></div>
-
-		<div id="customer">
-
-            <textarea id="customer-title">M'mart
-Online Medicine Portal</textarea>
-
-            <table id="meta">
-                <tr>
-                    <td class="meta-head">Invoice #</td>
-                    <td><textarea>000123</textarea></td>
-                </tr>
-                <tr>
-
-                    <td class="meta-head">Date</td>
-                    <td><textarea id="date">April 4, 1996</textarea></td>
-                </tr>
+                        <td class="meta-head">Date</td>
+                        <td><text id="date">April 4, 2017</text></td>
+                    </tr>
 
 
-            </table>
+                </table>
 
-		</div>
+    		</div>
 
-		<table id="items">
+    		<table id="items">
 
-		  <tr>
-		      <th>Item</th>
-		      <th>Description</th>
-		      <th>Unit Cost</th>
-		      <th>Quantity</th>
-		      <th>Price</th>
-		  </tr>
+    		  <tr>
+    		      <th>Item</th>
 
-		  <tr class="item-row">
-		      <td class="item-name"><div class="delete-wpr"><textarea>Budecort Respule</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
-		      <td class="description"><textarea>Cipla Respules</textarea></td>
-		      <td><textarea class="cost">₹100.00</textarea></td>
-		      <td><textarea class="qty">6</textarea></td>
-		      <td><span class="price">₹600.00</span></td>
-		  </tr>
+    		      <th>Unit Cost</th>
+    		      <th>Quantity</th>
+    		      <th>Price</th>
+    		  </tr>
+
+    		  <tr class="item-row">
+    		      <td class="item-name"><div class="delete-wpr"><text><?php echo $iname;?></text></div></td>
+
+    		      <td><text class="cost">₹123.00</text></td>
+    		      <td><text class="qty">1</text></td>
+    		      <td><span class="price">₹123.00</span></td>
+    		  </tr>
 
 
 
-		  <tr id="hiderow">
-		    <td colspan="5"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
-		  </tr>
+    		 	  <tr>
+    		      <td colspan="2" class="blank"> </td>
+    		      <td colspan="2" class="total-line">Subtotal</td>
+    		      <td class="total-value"><div id="subtotal">₹123.00</div></td>
+    		  </tr>
+    		  <tr>
 
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Subtotal</td>
-		      <td class="total-value"><div id="subtotal">₹700.00</div></td>
-		  </tr>
-		  <tr>
+    		      <td colspan="2" class="blank"> </td>
+    		      <td colspan="2" class="total-line">Total</td>
+    		      <td class="total-value"><div id="total">₹123.00</div></td>
+    		  </tr>
+    		  <tr>
+    		      <td colspan="2" class="blank"> </td>
+    		      <td colspan="2" class="total-line">Amount Paid</td>
 
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Total</td>
-		      <td class="total-value"><div id="total">₹700.00</div></td>
-		  </tr>
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Amount Paid</td>
-
-		      <td class="total-value"><textarea id="paid">₹700.00</textarea></td>
-		  </tr>
+    		      <td class="total-value"><text id="paid">₹123.00</text></td>
+    		  </tr>
 
 
-	</table>
+    	</table>
 
-		<div id="terms">
-		  <h5>Terms</h5>
-		  <textarea>Items purchased online using M'mart must be returned online within 10 days of purchase.</textarea>
-		</div>
+    		<div id="terms">
+    		  <h5>Terms</h5>
+    		  <text>Items purchased online using M'mart must be returned online within 10 days of purchase.</text>
+    		</div>
+        <button onclick="myFunction()">Print this page</button>
 
-	</div>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
 
-</body>
+    	</div>
 
-</html>
+
+    </body>
+
+    </html>
