@@ -1,0 +1,1002 @@
+/********************Symbol table*/*****************************************************
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+ char opcode[10],operand[10],label[10],code[10][10],ch; char mnemonic[10][10]={"START","LDA","STA","LDCH","STCH","END"};
+ int locctr,start,len,i=0,j=0;
+ FILE *fp1,*fp2,*fp3;
+ clrscr();
+ fp1=fopen("INPUT.DAT","r");
+ fp2=fopen("SYMTAB.DAT","w");
+ fp3=fopen("OUT.DAT","w");
+ fscanf(fp1,"%s%s%s",label,opcode,operand);
+ if(strcmp(opcode,"START")==0)
+  {
+   start=atoi(operand);
+   locctr=start;
+   fprintf(fp3,"%s\t%s\t%s\n",label,opcode,operand);
+   fscanf(fp1,"%s%s%s",label,opcode,operand);
+  }
+ else
+  locctr=0;
+ while(strcmp(opcode,"END")!=0)
+  {
+   fprintf(fp3,"%d",locctr);
+   if(strcmp(label,"**")!=0)
+     fprintf(fp2,"%s\t%d\n",label,locctr);
+   strcpy(code[i],mnemonic[j]);
+   while(strcmp(mnemonic[j],"END")!=0)
+    {
+     if(strcmp(opcode,mnemonic[j])==0)
+     {
+      locctr+=3;
+      break;
+     }
+     strcpy(code[i],mnemonic[j]);
+     j++;
+    }
+   if(strcmp(opcode,"WORD")==0)
+    locctr+=3;
+   else if(strcmp(opcode,"RESW")==0)
+    locctr+=(3*(atoi(operand)));
+   else if(strcmp(opcode,"RESB")==0)
+    locctr+=(atoi(operand));
+   else if(strcmp(opcode,"BYTE")==0)
+    ++locctr;
+   fprintf(fp3,"\t%s\t%s\t%s\n",label,opcode,operand);
+   fscanf(fp1,"%s%s%s",label,opcode,operand);
+  }
+  fprintf(fp3,"%d\t%s\t%s\t%s\n",locctr,label,opcode,operand);
+  fcloseall();
+  printf("\n\nThe contents of Input Table :\n\n");
+  fp1=fopen("INPUT.DAT","r");
+  ch=fgetc(fp1);
+  while(ch!=EOF)
+   {
+    printf("%c",ch);
+    ch=fgetc(fp1);
+   }
+  printf("\n\nThe contents of Output Table :\n\n\t");
+  fp3=fopen("OUT.DAT","r");
+  ch=fgetc(fp3);
+  while(ch!=EOF)
+   {
+    printf("%c",ch);
+    ch=fgetc(fp3);
+   }
+  len=locctr-start;
+  printf("\nThe length of the program is %d.\n\n",len);
+  printf("\n\nThe contents of Symbol Table :\n\n");
+  fp2=fopen("SYMTAB.DAT","r");
+  ch=fgetc(fp2);
+  while(ch!=EOF)
+   {
+    printf("%c",ch);
+    ch=fgetc(fp2);
+   }
+  fcloseall();
+  getch();
+}
+/*
+INPUT FILE: 
+
+File Saved With : INPUT.DAT
+
+** START 2000
+** LDA FIVE
+** STA ALPHA
+** LDCH CHARZ
+** STCH C1
+ALPHA RESW 1
+FIVE WORD 5
+CHARZ BYTE C'Z'
+C1 RESB 1
+** END **
+
+Output:
+*/
+*************************************************************MDT MNT***************************************************
+
+PASS I:
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+FILE *f1,*f2,*f3;
+char mne[20],opnd[20],la[20],ch;
+clrscr();
+f1=fopen("input.txt","r");
+f2=fopen("ntab2.txt","w");
+f3=fopen("dtab2.txt","w");
+fscanf(f1,"%s%s%s",la,mne,opnd);
+while(strcmp(mne,"MEND")!=0)
+{	
+if(strcmp(mne,"MACRO")==0)
+{
+fprintf(f2,"%s\n",la);
+fprintf(f3,"%s\t%s\n",la,opnd);
+}
+else
+fprintf(f3,"%s\t%s\n",mne,opnd);
+fscanf(f1,"%s%s%s",la,mne,opnd);
+}
+fprintf(f3,"%s",mne);
+fclose(f1);
+fclose(f2);
+fclose(f3);
+
+printf("The content of Input Table:\n");
+printf("\ninput.txt\n");
+f1=fopen("input.txt","r");
+ch=fgetc(f1);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f1);
+}
+printf("\n--------------------------------------------\n");
+printf("\nThe content of Output Table:");
+printf("\nntab2.txt\n");
+f2=fopen("ntab2.txt","r");
+ch=fgetc(f2);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f2);
+}
+printf("\n op2.txt \n");
+f3=fopen("dtab2.txt","r");
+ch=fgetc(f3);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f3);
+}
+fcloseall();
+printf("\nPASS 1 is successful");
+getch();
+}
+OUTPUT:
+ **********************
+
+PASS II:
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+FILE *f1,*f2,*f3,*f4,*f5;
+int i,len;
+char ch,mne[20],opnd[20],la[20],name[20],mne1[20],opnd1[20],arg[20];
+clrscr();
+f1=fopen("input.txt","r");
+f2=fopen("ntab2.txt","r");
+f3=fopen("dtab2.txt","r");
+f4=fopen("atab2.txt","w+");
+f5=fopen("op2.txt","w");
+fscanf(f1,"%s%s%s",la,mne,opnd);
+while(strcmp(mne,"END")!=0)
+{
+if(strcmp(mne,"MACRO")==0)
+{
+fscanf(f1,"%s%s%s",la,mne,opnd);
+while(strcmp(mne,"MEND")!=0)
+fscanf(f1,"%s%s%s",la,mne,opnd);
+}
+else
+{
+fscanf(f2,"%s",name);
+if(strcmp(mne,name)==0)
+{
+len=strlen(opnd);
+for(i=0;i<len;i++)
+{
+if(opnd[i]!=',')
+fprintf(f4,"%c",opnd[i]);
+else
+fprintf(f4,"\n");
+}
+fseek(f2,SEEK_SET,0);
+fseek(f4,SEEK_SET,0);
+fscanf(f3,"%s%s",mne1,opnd1);
+fprintf(f5,".\t%s\t%s\n",mne1,opnd);
+fscanf(f3,"%s%s",mne1,opnd1);
+while(strcmp(mne1,"MEND")!=0)
+{
+if((opnd1[0]=='&'))
+{
+fscanf(f4,"%s",arg);
+fprintf(f5,"-\t%s\t%s\n",mne1,arg);
+}
+else
+fprintf(f5,"-\t%s\t%s\n",mne1,opnd1);
+fscanf(f3,"%s%s",mne1,opnd1);
+}
+}
+else
+fprintf(f5,"%s\t%s\t%s\n",la,mne,opnd);
+}
+fscanf(f1,"%s%s%s",la,mne,opnd);
+}
+fprintf(f5,"%s\t%s\t%s\n",la,mne,opnd);
+fclose(f1);
+fclose(f2);
+fclose(f3);
+fclose(f4);
+fclose(f5);
+
+printf("\n The content of Input Table:\n");
+printf("\ninput.txt\n");
+f1=fopen("input.txt","r");
+ch=fgetc(f1);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f1);
+}
+
+printf("\n ntab2.txt\n");
+f2=fopen("ntab2.txt","r");
+ch=fgetc(f2);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f2);
+}
+
+printf("\n dtab2.txt\n");
+f3=fopen("dtab2.txt","r");
+ch=fgetc(f3);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f3);
+}
+
+printf("\n--------------------------------------------\n");
+printf("\nThe content of Output Table:");
+printf("\n atab2.txt\n");
+f4=fopen("atab2.txt","r");
+ch=fgetc(f4);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f4);
+}
+printf("\n op2.txt\n");
+f5=fopen("op2.txt","r");
+ch=fgetc(f5);
+while(ch!=EOF)
+{
+	printf("%c",ch);
+	ch=fgetc(f5);
+}
+fcloseall();
+
+printf("pass2  done successfully ");
+getch();
+}
+
+
+
+
+INPUT File:
+EX1	MACRO	&A,&B
+-	LDA	&A
+-	STA	&B
+-	MEND	-
+SAMPLE	START	1000
+-	EX1	N1,N2
+N1	RESW	1
+N2	RESW	1
+-	END	-
+
+*****************************************************************************Loader*****************************
+
+# include <stdio.h> 
+# include <conio.h> 
+# include <string.h> 
+void main() 
+{ 
+char input[10]; 
+int start,length,address; 
+FILE *fp1,*fp2; 
+clrscr(); 
+fp1=fopen("input2.dat","r"); 
+fp2=fopen("out2.dat","w"); 
+fscanf(fp1,"%s",input); 
+while(strcmp(input,"E")!=0) 
+{ 
+if(strcmp(input,"H")==0) 
+{ 
+fscanf(fp1,"%d",&start); 
+fscanf(fp1,"%d",&length); 
+fscanf(fp1,"%s",input); 
+} 
+else if(strcmp(input,"T")==0) 
+{ 
+fscanf(fp1,"%d",&address); 
+fscanf(fp1,"%s",input); 
+fprintf(fp2,"%d\t%c%c\n",address,input[0],input[1]); 
+fprintf(fp2,"%d\t%c%c\n",(address+1),input[2],input[3]); 
+fprintf(fp2,"%d\t%c%c\n",(address+2),input[4],input[5]); 
+address+=3; 
+fscanf(fp1,"%s",input); 
+} 
+else 
+{ 
+fprintf(fp2,"%d\t%c%c\n",address,input[0],input[1]); 
+fprintf(fp2,"%d\t%c%c\n",(address+1),input[2],input[3]); 
+fprintf(fp2,"%d\t%c%c\n",(address+2),input[4],input[5]); 
+address+=3; 
+fscanf(fp1,"%s",input); 
+} 
+} 
+fclose(fp1); 
+fclose(fp2); 
+printf("FINISHED"); 
+getch(); 
+}
+
+Input & Output: 
+Input File: 
+INPUT2.DAT 
+H 1000 232 
+T 1000 142033 483039 102036 
+T 2000 298300 230000 282030 302015 
+E
+
+output:***
+********************************************************************2 program************************************************
+Source Code: 
+Sub.c
+#include<stdio.h>
+void second();
+void main()
+{
+int a,b,sub;
+printf("\n Enter Any Two Numbers To Subtract : ");
+scanf("%d%d",&a,&b);
+sub=a-b;
+printf("\n Subtraction = %d",sub);
+}
+
+Hello.c
+#include <stdio.h>
+void second()
+{
+   // printf() displays the string inside quotation
+   printf("Hello, World!");   
+}
+
+OUTPUT:
+gcc Sub.c Hello.c -o all1
+**************************************************************************Lexical Analyser
+PROGRAM:
+#include<stdio.h> 
+#include<string.h> 
+#include<stdlib.h>
+
+void removeduplicate(); 
+void final();
+int Isiden(char ch);
+int Isop(char ch);
+int Isdel(char ch);
+int Iskey(char * str);
+void removeduplicate();
+
+char op[8]={'+','-','*','/','=','<','>','%'}; 
+char del[8]={'}','{',';','(',')','[',']',','}; 
+char *key[]={"int","void","main","char","float"}; 
+
+//char *operato[]={"+","-","/","*","<",">","=","%","<=",">=","++"}; 
+
+int idi=0,idj=0,k,opi=0,opj=0,deli=0,uqdi=0,uqidi=0,uqoperi=0,kdi=0,liti=0,ci=0; 
+int uqdeli[20],uqopi[20],uqideni[20],l=0,j; 
+char uqdel[20],uqiden[20][20],uqop[20][20],keyword[20][20]; 
+char iden[20][20],oper[20][20],delem[20],litral[20][20],lit[20],constant[20][20]; 
+
+void lexanalysis(char *str) 
+ { 
+   int i=0; 
+   while(str[i]!='\0') 
+    { 
+     if(Isiden(str[i]))     //for identifiers 
+       { 
+          while(Isiden(str[i])) 
+        { 
+            iden[idi][idj++]=str[i++]; 
+        } 
+          iden[idi][idj]='\0'; 
+          idi++;idj=0; 
+       } 
+      else 
+      if(str[i]=='"')         //for literals 
+         { 
+         lit[l++]=str[i]; 
+         for(j=i+1;str[j]!='"';j++) 
+           { 
+            lit[l++]=str[j]; 
+           } 
+         lit[l++]=str[j];lit[l]='\0'; 
+         strcpy(litral[liti++],lit); 
+         i=j+1; 
+         } 
+      else 
+      if(Isop(str[i]))        // for operators 
+          { 
+         while(Isop(str[i])) 
+            { 
+             oper[opi][opj++]=str[i++]; 
+            } 
+         oper[opi][opj]='\0'; 
+         opi++;opj=0; 
+          } 
+       else 
+       if(Isdel(str[i]))     //for delemeters 
+          { 
+          while(Isdel(str[i])) 
+            { 
+              delem[deli++]=str[i++]; 
+            } 
+           } 
+        else 
+           { 
+            i++; 
+        } 
+     } 
+
+   removeduplicate(); 
+   final(); 
+} 
+
+int Isiden(char ch) 
+ { 
+   if(isalpha(ch)||ch=='_'||isdigit(ch)||ch=='.') 
+   return 1; 
+   else 
+   return 0; 
+ } 
+
+int Isop(char ch) 
+ { 
+  int f=0,i; 
+  for(i=0;i<8&&!f;i++) 
+   { 
+    if(ch==op[i]) 
+     f=1; 
+   } 
+ return f; 
+} 
+
+int Isdel(char ch) 
+ { 
+  int f=0,i; 
+  for(i=0;i<8&&!f;i++) 
+   { 
+    if(ch==del[i]) 
+     f=1; 
+   } 
+ return f; 
+ } 
+
+int Iskey(char * str) 
+{ 
+  int i,f=0; 
+  for(i=0;i<5;i++) 
+   { 
+    if(!strcmp(key[i],str)) 
+      f=1; 
+    } 
+  return f; 
+} 
+
+void removeduplicate() 
+ { 
+   int i,j; 
+   for(i=0;i<20;i++) 
+    { 
+     uqdeli[i]=0; 
+     uqopi[i]=0; 
+     uqideni[i]=0; 
+    } 
+   for(i=1;i<deli+1;i++)  //removing duplicate delemeters 
+     { 
+       if(uqdeli[i-1]==0) 
+     { 
+           uqdel[uqdi++]=delem[i-1]; 
+           for(j=i;j<deli;j++) 
+          { 
+               if(delem[i-1]==delem[j]) 
+                uqdeli[j]=1; 
+          } 
+      } 
+     } 
+
+    for(i=1;i<idi+1;i++)  //removing duplicate  identifiers 
+       { 
+      if(uqideni[i-1]==0) 
+         { 
+        strcpy(uqiden[uqidi++],iden[i-1]); 
+        for(j=i;j<idi;j++) 
+         { 
+            if(!strcmp(iden[i-1],iden[j])) 
+               uqideni[j]=1; 
+         } 
+          } 
+    } 
+
+     for(i=1;i<opi+1;i++)  //removing duplicate  operators 
+     { 
+        if(uqopi[i-1]==0) 
+           { 
+           strcpy(uqop[uqoperi++],oper[i-1]); 
+           for(j=i;j<opi;j++) 
+             { 
+               if(!strcmp(oper[i-1],oper[j])) 
+                 uqopi[j]=1; 
+             } 
+           } 
+     } 
+
+ } 
+void final() 
+ { 
+  int i=0; 
+  idi=0; 
+  for(i=0;i<uqidi;i++) 
+   { 
+     if(Iskey(uqiden[i]))        //identifying keywords 
+     strcpy(keyword[kdi++],uqiden[i]); 
+     else 
+      if(isdigit(uqiden[i][0]))    //identifying constants 
+     strcpy(constant[ci++],uqiden[i]); 
+     else 
+     strcpy(iden[idi++],uqiden[i]); 
+   } 
+
+// printing the outputs 
+
+printf("\n\tDelemeter are : \n"); 
+for(i=0;i<uqdi;i++) 
+printf("\t%c\n",uqdel[i]); 
+
+printf("\n\tOperators are : \n"); 
+for(i=0;i<uqoperi;i++) 
+ { 
+ printf("\t"); 
+ puts(uqop[i]); 
+ } 
+
+printf("\n\tIdentifiers are : \n"); 
+for(i=0;i<idi;i++) 
+ { 
+  printf("\t"); 
+  puts(iden[i]); 
+ } 
+
+printf("\n\tKeywords are : \n"); 
+for(i=0;i<kdi;i++) 
+ { 
+  printf("\t"); 
+  puts(keyword[i]); 
+ } 
+
+printf("\n\tConstants are :\n"); 
+for(i=0;i<ci;i++) 
+  { 
+  printf("\t"); 
+  puts(constant[i]); 
+  } 
+
+printf("\n\tLiterals are :\n"); 
+for(i=0;i<liti;i++) 
+ { 
+   printf("\t"); 
+   puts(litral[i]); 
+ } 
+} 
+void main() 
+{ 
+  char str[50]; 
+  //clrscr(); 
+  printf("\nEnter the string : "); 
+  scanf("%[^\n]c",str);
+  lexanalysis(str); 
+  //getch(); 
+}
+OUtput
+Enter the sting=#include<stdio.h> void main{int a=5; b=a+5;} 
+/**************************************************************recursive descend parser .*****************************
+#include "stdio.h"
+#include "conio.h"
+char input[100];
+char prod[100][100];
+int pos=-1,l,st=-1;
+char id,num;
+void E();
+void T();
+void F();
+void advance();
+void Td();
+void Ed();
+void advance()
+{
+pos++;
+if(pos&lt;l)
+{
+if(input[pos]&gt;='0'&amp;&amp; input[pos]&lt;='9')
+{
+num=input[pos];
+id='\0';
+}
+if((input[pos]&gt;='a' || input[pos]&gt;='A')&amp;&amp;(input[pos]&lt;='z' || input[pos]&lt;='Z'))
+{id=input[pos];
+num='\0';
+}
+}
+}
+void E()
+{
+strcpy(prod[++st],"E-&gt;TE'");
+T();
+Ed();
+}
+void Ed()
+{
+int p=1;
+if(input[pos]=='+')
+{
+p=;
+strcpy(prod[++st],"E'-&gt;+TE'");
+advance();
+T();
+Ed();
+}
+if(input[pos]=='-')
+{   p=;
+strcpy(prod[++st],"E'-&gt;-TE'");
+advance();
+T();
+Ed();
+}
+                           // Recursive Descent Parser
+if(p==1)
+{
+strcpy(prod[++st],"E'-&gt;null");
+}
+}
+void T()
+{
+strcpy(prod[++st],"T-&gt;FT'");
+F();
+Td();
+}
+void Td()
+{
+int p=1;
+if(input[pos]=='*')
+{
+p=;
+strcpy(prod[++st],"T'-&gt;*FT'");
+advance();
+F();
+Td();
+}
+if(input[pos]=='/')
+{   p=;
+strcpy(prod[++st],"T'-&gt;/FT'");
+advance();
+F();
+Td();
+}
+if(p==1)
+strcpy(prod[++st],"T'-&gt;null");
+}
+void F()
+{
+if(input[pos]==id) {
+strcpy(prod[++st],"F-&gt;id");
+advance();          }
+if(input[pos]=='(')
+{
+strcpy(prod[++st],"F-&gt;(E)");
+advance();
+E();
+if(input[pos]==')')   {
+//strcpy(prod[++st],"F-&gt;(E)");
+advance();             }
+}
+if(input[pos]==num)
+{
+strcpy(prod[++st],"F-&gt;num");
+advance();
+}
+}
+int main()
+{
+int i;
+printf("Enter Input String ");
+scanf("%s",input);
+l=strlen(input);
+input[l]='$';
+advance();
+E();
+if(pos==l)
+{
+printf("String Accepted\n");
+for(i=;i&lt;=st;i++)
+{
+printf("%s\n",prod[i]);
+}
+}
+else
+{
+printf("String rejected\n");
+}
+getch();
+return ;
+}
+
+OUTPUT:
+string=(a+b)
+**************************************************************************first & follow********************************
+#include<conio.h>
+#include<String.h>
+ int n,m=0,p,i=0,j=0;
+ char a[10][10],f[10];
+ void follow(char c);
+ void first(char c);
+ int main(){
+
+   int i,z;
+   char c,ch;
+   clrscr();
+   printf("Enter the no of prooductions:\n");
+   scanf("%d",&n);
+   printf("Enter the productions:\n");
+   for(i=0;i<n;i++)
+    scanf("%s%c",a[i],&ch);
+    do{
+     m=0;
+     printf("Enter the elemets whose fisrt & follow is to be found:");
+     scanf("%c",&c);
+     first(c);
+     printf("First(%c)={",c);
+     for(i=0;i<m;i++)
+      printf("%c",f[i]);
+      printf("}\n");
+      strcpy(f," ");
+      flushall();
+      m=0;
+      follow(c);
+      printf("Follow(%c)={",c);
+       for(i=0;i<m;i++)
+ printf("%c",f[i]);
+ printf("}\n");
+ printf("Continue(0/1)?");
+ scanf("%d%c",&z,&ch);
+     }while(z==1);
+      return(0);
+   }
+
+void first(char c)
+ {
+  int k;
+   if(!isupper(c))
+    f[m++]=c;
+     for(k=0;k<n;k++)
+      {
+       if(a[k][0]==c)
+ {
+   if(a[k][2]=='$')
+    follow(a[k][0]);
+   else if(islower(a[k][2]))
+    f[m++]=a[k][2];
+   else first(a[k][2]);
+ }
+       }
+     }
+ void follow(char c)
+  {
+   if(a[0][0]==c)
+    f[m++]='$';
+   for(i=0;i<n;i++)
+    {
+     for(j=2;j<strlen(a[i]);j++)
+      {
+       if(a[i][j]==c)
+ {
+   if(a[i][j+1]!='\0')
+     first(a[i][j+1]);
+    if(a[i][j+1]=='\0' && c!=a[i][0])
+     follow(a[i][0]);
+  }
+       }
+     }
+   }
+ /* OUTPUT:
+ Enter the no of prooductions:
+5
+Enter the productions:
+S=AbCd
+A=Cf
+A=a
+C=gE
+E=h
+Enter the elemets whose fisrt & follow is to be found:S
+First(S)={ga}
+Follow(S)={$}
+Continue(0/1)?1
+Enter the elemets whose fisrt & follow is to be found:A
+First(A)={ga}
+Follow(A)={b}
+Continue(0/1)?1
+Enter the elemets whose fisrt & follow is to be found:C
+First(C)={g}
+Follow(C)={df}
+Continue(0/1)?1
+Enter the elemets whose fisrt & follow is to be found:E
+First(E)={h}
+Follow(E)={df}
+Continue(0/1)?0
+*/
+*******************************************************check whether a string belongs to a grammar or not*/Shift Reduce Parser 
+
+#include<stdio.h>
+
+
+#include<string.h>
+struct stru1
+{
+char non_ter[1],pro[25];
+}cfg[25];
+int n,st=-1,j,i,t=-1,m;
+int v,c,p=1;
+char str[20],stack[20],ch,tmp[10];
+void match(int k);
+void matchl(int k);
+void main()
+{
+
+printf("Enter the number of productions:\n\r");
+scanf("%d",&n);
+printf("\n\r");
+printf("Enter the productions on LEFT and RIGHT sides:\n\r");
+
+for(i=0;i<n;i++)
+{
+scanf("%s",cfg[i].non_ter);
+printf("\n\r");
+printf("->\n\r");
+scanf("%s",cfg[i].pro);
+printf("\n\r");
+}
+printf("Enter the input string:\n\r");
+scanf("%s",str);
+printf("\n\r");
+i=0;
+do
+{
+ch=str[i];
+stack[++st]=ch;
+tmp[0]=ch;
+match(1);
+i++;
+}while(str[i]!='\0');
+c=st;
+v=st;
+puts(stack);
+printf("\n\r");
+while(st!=0)
+{
+v=--st;
+t=-1;
+p=0;
+while(v<=c)
+{
+tmp[++t]=stack[v++];
+p++;
+}
+matchl(p);
+}
+cfg[0].non_ter[1]='\0';
+if(strcmp(stack,cfg[0].non_ter)==0)
+printf("String is present in Grammar G\n\r");
+else
+printf("String is not present in Grammar G\n\r");
+}
+
+void match(int k)
+{
+for(j=0;j<n;j++)
+{
+if(strlen(cfg[j].pro)==k)
+{
+if(strcmp(tmp,cfg[j].pro)==0)
+{
+stack[st]=cfg[j].non_ter[0];
+break;
+}
+}
+}
+}
+void matchl(int k)
+{
+int x=1,y;
+y=k-1;
+for(j=0;j<n;j++)
+{
+if(strlen(cfg[j].pro)==k)
+{
+if(strcmp(tmp,cfg[j].pro)==0)
+{
+k=c-k+1;
+stack[k]=cfg[j].non_ter[0];
+do
+{
+stack[k+x]='\0';
+tmp[t--]='\0';
+c--;
+x++;
+}while(x<=y);
+tmp[t]='\0';
+puts(stack);
+printf("\n\r");
+break;
+}
+}
+}
+}
+/*/*output
+no of productio 3
+E
+->
+a
+
+E
+->
+E+E
+
+E->
+E*E
+
+sticng to check a*a+a
+
+/////////////////////////////////////////*****Operator Precedence Parser.***********************************************
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void main()
+{
+  int i=0,j=0,k=0,p[10];
+  char name[20];
+  char key[20]={'(',')','&','%','^','*','/','+','-','|',';'};
+  //textcolor(2);
+  printf("---Operator Precedence-----\n");
+  printf("\nEnter the expression:");
+  scanf("%s",name);
+  printf("\n---output----\n");
+  for(i=0;i<20;i++)
+  {
+	for(j=0;j<strlen(name);j++)
+	{
+  	char c;
+  	c=tolower(name[j]);
+  	if(!isalpha(c)&&!isdigit(c))
+   	{
+     	if(key[i]==c)
+      	{
+        	printf("\n %c is executed %d(%c %c %c)\n",c,k++,tolower(name[j-1]),c,tolower(name[j+1]));
+      	}
+   	}
+	}
+ }
+}
+
+********************************************
